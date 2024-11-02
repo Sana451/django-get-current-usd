@@ -1,16 +1,20 @@
-# Django проект, "/get-current-usd/" возвращает актуальный курс доллара к рублю и 10 последних запросов курсов в формате JSON. 
+# Django проект Get-current-usd возвращает актуальный курс доллара к рублю и 10 последних запросов курса в формате JSON.
 
 ## Для получения курса использовано внешнее API https://www.exchangerate-api.com/.
 ## Между каждым запросом курса должна быть пауза не менее 10 секунд.
 
-
 # Инструкция по развёртыванию
-Скачать исходный код проекта: `git clone https://github.com/Sana451/django-get-current-usd.git`    
-Перейти в папку с проектом: `cd django-get-current-usd/`
-Установить зависимости: `pip install -r requirements.txt`
+* Скачать исходный код проекта: `git clone https://github.com/Sana451/django-get-current-usd.git`
+* Перейти в папку с проектом: `cd django-get-current-usd/`
+* Установить виртуальное окружение: `python -m pip install --upgrade pip && pip install virtualenv`
+* Создать виртуальное окружение `python -m virtualenv django_virtualenv`
+* Активировать виртуальное окружение:
+1. Для OS Windows  `django_virtualenv\Scripts\activate`
+2. Для OS Linux `source django_virtualenv/bin/activate`
+* Установить зависимости: `pip install -r requirements.txt`
+* Запустить сервер `python manage.py runserver`
 
-Произвести сборку контейнера: `docker build --progress=plain --no-cache -t weather-app .`    
-Запустить контейнер: `docker run -it --rm -p 8000:8000 --name weather-app weather-app`    
+## Использование
 
-## Использованиеы
-После запуска контейнера перейти на URL: [http://127.0.0.1:8000/get-current-usd/](http://127.0.0.1:8000/get-current-usd/).
+После запуска контейнера перейти на
+URL: [http://127.0.0.1:8000/get-current-usd/](http://127.0.0.1:8000/get-current-usd/).
