@@ -5,14 +5,12 @@
 
 
 # Инструкция по развёртыванию
-Скачать исходный код проекта: `git clone https://github.com/Sana451/django_weather_app.git`    
-Перейти в папку с проектом: `cd django_weather_app/`    
+Скачать исходный код проекта: `git clone https://github.com/Sana451/django-get-current-usd.git`    
+Перейти в папку с проектом: `cd django-get-current-usd/`
+Установить зависимости: `pip install -r requirements.txt`
+
 Произвести сборку контейнера: `docker build --progress=plain --no-cache -t weather-app .`    
 Запустить контейнер: `docker run -it --rm -p 8000:8000 --name weather-app weather-app`    
 
-## Работа
-После запуска контейнера перейти на URL: [http://localhost:8000/](http://localhost:8000/),
-ввести требуемый город и получить текущую погодные условия, а также прогноз на ближайшие сутки.
-Нажмите на ссылку 'количество просмотров прогноза погоды для этого города' или отправьте GET запрос
-по адресу [http://localhost:8000/api/count/Замените_на_существующий_город](http://localhost:8000/api/count/Замените_на_существующий_город)
-для получения от АПИ количества просмотров прогноза погоды в этом городе.
+## Использованиеы
+После запуска контейнера перейти на URL: [http://127.0.0.1:8000/get-current-usd/](http://127.0.0.1:8000/get-current-usd/).
